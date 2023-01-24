@@ -1,0 +1,122 @@
+body {
+    background-image: linear-gradient(135deg, #5a6aaf 10%, #2fb17d 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Open Sans", sans-serif;
+    color: #333333;
+    }
+
+#screen{
+    padding: 1px;
+    font-size: 30px;
+    color: #5a6aaf;
+    display: flex;
+    width: 1300;
+    flex-direction: row;
+}
+
+#left_screen{
+    border-radius: 25px;
+    font-size: 30px;
+    color: #5a6aaf;
+    display: flex;
+    width: 800px;
+    height: 900px;
+    background-color: #8dc53e;
+    flex-direction: column;
+
+}
+
+#left_header{
+    height: 80px; 
+    width: 800px;
+}
+
+#header_text {
+    border-radius: 25px;
+    margin-right: 20px;
+    margin-top: 10px; 
+    margin-left: 50px;
+    background-color: #fefdcee3; 
+    height: 60px; 
+    width: 600px;
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+
+#left_main{
+    height: 1200px;
+    width: 800px;
+}
+
+#ride_share_title{
+    margin: 20px;
+    height: 50px;
+    width: 500px;
+    font-family: "Bradley Hand ITC";
+    font-weight: 100;
+    color: #fefdce;
+
+}
+
+#ride_share{
+    background-color: red;
+    margin: 20px;
+    height: 150px;
+    width: 150px;
+}
+
+
+
+
+
+
+#right_screen{
+    margin-left: 50px;
+    border-radius: 25px;
+    font-size: 30px;
+    color: #5a6aaf;
+    display: flex;
+    width: 450px;
+    height: 900px;
+    background-color:#2fb17d;
+    flex-direction: column;
+
+}
+
+
+#header_logo {
+    border-radius: 25px;
+    width: 200;  
+    height: 150px;
+    padding-left: 100px;
+}
+
+#map{
+    border-radius: 25px;
+    width: 70%;  
+    height: 20%;
+    padding: 2px;
+    margin-top: 100px;
+    margin-left: 15%;
+    background-color: red;
+}
+#picture{
+    border-radius: 25px;
+    width: 80%;  
+    height: 20%;
+    margin:5%;
+    margin-left: 20%
+}
+
+
+
+
