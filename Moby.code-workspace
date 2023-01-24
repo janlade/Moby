@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../login-page"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Moby"
+	}
+}
