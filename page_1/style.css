@@ -1,34 +1,5 @@
 body {
-<<<<<<< Updated upstream
-    background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: "Open Sans", sans-serif;
-    color: #333333;
-    }
-  
-.box-form {
-    margin: 0 auto;
-    width: 80%;
-    background: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex: 1 1 100%;
-    align-items: stretch;
-    justify-content: space-between;
-    box-shadow: 0 0 20px 6px #090b6f85;
-    }
-  
-.box-form div {
-  height: auto;
-  }
-.box-form .left {
-  color: #ffffff;
-=======
   background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
->>>>>>> Stashed changes
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -42,22 +13,11 @@ body {
   background: #ffffff;
   border-radius: 10px;
   overflow: hidden;
-<<<<<<< Updated upstream
-  } 
-.box-form .left .overlay {
-  padding: 30px;
-  width: 100%;
-  height: 100%;
-  background: #4e56f2ad;
-  overflow: hidden;
-  box-sizing: border-box;
-=======
   display: flex;
   flex: 1 1 100%;
   align-items: stretch;
   justify-content: space-between;
   box-shadow: 0 0 20px 6px #090b6f85;
->>>>>>> Stashed changes
   }
 
 .box-form div {
@@ -67,6 +27,7 @@ height: auto;
 color: #ffffff;
 background-size: cover;
 background-repeat: no-repeat;
+
 overflow: hidden;
 } 
 .box-form .left .overlay {
@@ -78,21 +39,12 @@ overflow: hidden;
 box-sizing: border-box;
 }
 .box-form .left .overlay h1 {
-<<<<<<< Updated upstream
-  font-size: 7vmax;
-  line-height: 1;
-  font-weight: 900;
-  margin-top: auto;
-  margin-bottom: 25px;
-  }
-=======
 font-size: 7vmax;
 line-height: 1;
 font-weight: 900;
 margin-top: auto;
 margin-bottom: 25px;
 }
->>>>>>> Stashed changes
 .box-form .right {
 padding: 40px;
 overflow: hidden;
@@ -128,19 +80,6 @@ margin-right: 7px;
 width: auto;
 }
 .box-form .right button {
-<<<<<<< Updated upstream
-  float: right;
-  color: #fff;
-  font-size: 16px;
-  padding: 12px 35px;
-  border-radius: 50px;
-  display: inline-block;
-  border: 0;
-  outline: 0;
-  box-shadow: 0px 4px 20px 0px #49c628a6;
-  background-image: linear-gradient(135deg, #70F570 10%, #49C628 100%);
-  }
-=======
 float: right;
 color: #fff;
 font-size: 16px;
@@ -152,4 +91,3 @@ outline: 0;
 box-shadow: 0px 4px 20px 0px #49c628a6;
 background-image: linear-gradient(135deg, #70F570 10%, #49C628 100%);
 }
->>>>>>> Stashed changes
