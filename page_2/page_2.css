@@ -17,35 +17,31 @@ body {
 }
 
 #left_screen{
-    border-radius: 25px;
     font-size: 30px;
     color: #5a6aaf;
     display: flex;
-    width: 800px;
-    height: 900px;
+    width: 65%;
+    height: 100%;
     background-color: #8dc53e;
     flex-direction: column;
 
 }
 
 #left_header{
-    height: 80px; 
-    width: 800px;
+    height: 10%; 
+    width: 100%;
 }
 
 #header_text {
-    border-radius: 25px;
-    margin-right: 20px;
-    margin-top: 10px; 
-    margin-left: 50px;
     background-color: #fefdcee3; 
-    height: 60px; 
-    width: 600px;
+    height: 90%; 
+    width: 100%;
     text-align: center;
+    font-family: "Castellar";
 }
 
 h1{
-    font-size: 40px;
+    font-size: 100%;
     padding: 0px;
     margin: 0px;
     padding-top: 10px;
@@ -53,17 +49,23 @@ h1{
 
 
 #left_main{
-    height: 1200px;
-    width: 800px;
+    height: 100%;
+    width: 100%;
+}
+
+#left_pic{
+    color: #fefdcee3;
+    object-fit: scale-down;
+    width: 50%;
 }
 
 #ride_share_title{
-    margin: 20px;
+    margin: 10%;
     height: 50px;
-    width: 500px;
+    width: 80%;
     font-family: "Bradley Hand ITC";
     font-weight: 100;
-    color: #fefdce;
+    color: #fefdcee3;
 
 }
 
@@ -80,14 +82,13 @@ h1{
 
 
 #right_screen{
-    margin-left: 50px;
-    border-radius: 25px;
     font-size: 30px;
     color: #5a6aaf;
     display: flex;
-    width: 450px;
+    width: 35%;
     height: 900px;
-    background-color:#2fb17d;
+    background-color:#fefdcee3;
+    /*background-color:#2fb17d;*/
     flex-direction: column;
 
 }
