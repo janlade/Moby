@@ -45,6 +45,11 @@ font-weight: 900;
 margin-top: auto;
 margin-bottom: 25px;
 }
+.box-form .left .overlay img{
+position: absolute;
+left: 150px;
+bottom: 0px;
+}
 .box-form .right {
 padding: 40px;
 overflow: hidden;
