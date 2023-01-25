@@ -22,8 +22,10 @@ body {
     display: flex;
     width: 65%;
     height: 100%;
-    background-color: #8dc53e;
+    /*/background-color: #8dc53e;*/
+    background-color: #fefdceb9;
     flex-direction: column;
+    
 
 }
 
@@ -51,29 +53,54 @@ h1{
 #left_main{
     height: 100%;
     width: 100%;
+    background-image: url("../images/cars.jpg");
+    opacity: 0.4;
 }
 
-#left_pic{
-    color: #fefdcee3;
-    object-fit: scale-down;
-    width: 50%;
+#left_content{
+    margin-top: 10%;
+    margin-left: 10%;
+    height: 60%;
+    /*color: #fefdcee3;*/
+    background-color: #fefdcee3;
+    width: 80%;
+}
+
+
+
+img{
+    min-width:10%;
+    min-height:10%;
+    max-width:100%;
+    max-height:100%;
 }
 
 #ride_share_title{
     margin: 10%;
-    height: 50px;
-    width: 80%;
+    height: 10%px;
+    width: 100%;
     font-family: "Bradley Hand ITC";
-    font-weight: 100;
-    color: #fefdcee3;
+    font-size: ;
+    color: #5a6aaf;
 
 }
 
 #ride_share{
-    background-color: red;
-    margin: 20px;
-    height: 150px;
-    width: 150px;
+    background-color: #5a6aaf;
+    margin: 10%;
+    height: 10%;
+    width: 30%;
+    color: #fefdcee3;
+    flex-direction: row;
+}
+
+#ride_share_content{
+        background-color: #5a6aaf;
+        margin: 2%;
+        height: 10%;
+        width: 50%;
+        color: #fefdcee3;
+
 }
 
 
@@ -86,36 +113,35 @@ h1{
     color: #5a6aaf;
     display: flex;
     width: 35%;
-    height: 900px;
+    height: 100%;
     background-color:#fefdcee3;
+    opacity: 0.7;
     /*background-color:#2fb17d;*/
     flex-direction: column;
 
 }
 
-
 #header_logo {
-    border-radius: 25px;
-    width: 200;  
-    height: 150px;
-    padding-left: 100px;
+    width: 80%;  
+    height: 30%;
+    margin: 10%;
+    margin-top: 1%;
 }
 
 #map{
     border-radius: 25px;
     width: 70%;  
-    height: 20%;
-    padding: 2px;
-    margin-top: 100px;
-    margin-left: 15%;
-    background-color: red;
+    height: 30%;
+    padding: 5%;
+    margin-top: 3%;
+    margin: 10%;
+    background-color: #fefdcee3;
+    opacity: 1;
 }
 #picture{
-    border-radius: 25px;
     width: 80%;  
-    height: 20%;
-    margin:5%;
-    margin-left: 20%
+    height: 30%;
+    margin:10%;
 }
 
 
