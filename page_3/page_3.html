@@ -7,6 +7,7 @@
     <title>Moby</title>
     <link href="page_3.css" rel="stylesheet" type="text/css" />
 </head>
+<script src="page_3.js"></script>
 
 <body>
     <div id="screen">
@@ -20,9 +21,9 @@
                     <h1 style="color: #5a6aaf"> DHBW RideShare </h1>
                 </div>
             </div>
-            
+
             <br>
-            
+
             <div id="left_main">
                 <!-- 
                 <div id="left_pic"> 
@@ -37,79 +38,83 @@
                     <div id="ride_share">
                         <label for="Anfrage">Bitte auswählen:</label>
                         <br>
-                        <select name="Anfrage" id="Anfrage">
+                        <select name="Anfrage" id="type">
                         <option value="car">Mitfahrer gesucht</option>
                         <option value="person">Mitfahrgelegenheit gesucht</option>
-                        </select> 
+                        </select>
                     </div>
 
                     <div id="ride_share">
-                        <label for="Anzahl">Anzahl Sitze:</label>   
-                        <select name="number" id="number">
+                        <label for="Anzahl">Anzahl Sitze:</label>
+                        <select name="number" id="seats">
                         <option value="one">1 Sitzplatz</option>
                         <option value="two">2 Sitzplätze</option>
                         <option value="three">3 Sitzplätze</option>
                         <option value="four">4 Sitzplätze</option>
-                        </select> 
+                        </select>
                     </div>
 
                     <div id="ride_share">
-                     <form >
-                        <label for="Start">Start:</label>
-                        <input type="text" id="start" name="start"><br><br>
-                        <label for="Ziel">Ziel:</label>
-                        <input type="text" id="ziel" name="ziel"><br><br>
-                      </form> 
+                        <form>
+                            <label for="Start">Start:</label>
+                            <input type="text" id="start" name="start"><br><br>
+                            <label for="Ziel">Ziel:</label>
+                            <input type="text" id="ziel" name="ziel"><br><br>
+                        </form>
                     </div>
                     <div id="ride_share">
-                        <form >
-                           <label for="Von">Uhrzeit von:</label>
-                           <input type="text" id="von" name="von"><br><br>
-                           <label for="Bis">Uhrzeit bis:</label>
-                           <input type="text" id="bis" name="bis"><br><br>
-                           <a href="../page_2/page_2.html"> <input type="submit" value="Abbrechen"/> </a>
-                           <input type="submit" value="Speichern">
-                           
-                          
+                        <form>
+                            <label for="Von">Uhrzeit von:</label>
+                            <input type="text" id="time_start" name="von"><br><br>
+                            <label for="Bis">Uhrzeit bis:</label>
+                            <input type="text" id="time_end" name="bis"><br><br>
+                            <a href="../page_2/page_2.html"> <input type="submit" value="Abbrechen" /> </a>
+                            <input type="submit" value="Speichern">
 
-                         </form> 
-                         
+
+
+                        </form>
+
                     </div>
+
                     <head>
-                        <title>Submit Button Redirect</title>  
-                      </head>    
-                       <body>     
-                        <form method="POST" action="../page_2/page_2.html">  
-                          <input type="submit"/>  
-                        </form>    
-                       </body> 
+                        <title>Submit Button Redirect</title>
+                    </head>
+
+                    <body>
+                        <form method="POST" action="../page_2/page_2.html">
+                            <input type="submit" />
+                        </form>
+                    </body>
+
+                    <button onclick="window.alert('click'); saveAnfrage()"><a > Speichern2 </a></button>
 
                 </div>
-                
+
             </div>
 
         </div>
 
         <div id="right_screen2">
-            
-                <div id="header_logo">
-                    <img src="../images/MOBY_ICON.png" alt="Moby Icon">
+
+            <div id="header_logo">
+                <img src="../images/MOBY_ICON.png" alt="Moby Icon">
+            </div>
+            <div id="map">
+                <div id="map_arrow">
+                    <img src="../images/arrow2.jpg" alt="Moby Icon">
                 </div>
-                <div id="map">
-                    <div id="map_arrow"> 
-                        <img src="../images/arrow2.jpg" alt="Moby Icon">
-                    </div>
-                
-                    <a href="../page_3/page_3.html"> Route anzeigen  </a>
-                    
-                </div>
-                <div id="picture"> 
-                    <img src="../images/globe-trotter.jpg" alt="Moby Icon">
-                </div> 
+
+                <a href="../page_3/page_3.html"> Route anzeigen  </a>
+
+            </div>
+            <div id="picture">
+                <img src="../images/globe-trotter.jpg" alt="Moby Icon">
+            </div>
             <div>
                 <a href="../page_1/index.html"> Logout  </a>
             </div>
-            
+
         </div>
 
     </div>

@@ -5,9 +5,9 @@ body {
     background-attachment: fixed;
     font-family: "Open Sans", sans-serif;
     color: #333333;
-    }
+}
 
-#screen{
+#screen {
     padding: 1px;
     font-size: 30px;
     color: #5a6aaf;
@@ -16,7 +16,7 @@ body {
     flex-direction: row;
 }
 
-#left_screen{
+#left_screen {
     font-size: 30px;
     color: #5a6aaf;
     display: flex;
@@ -25,45 +25,42 @@ body {
     /*/background-color: #8dc53e;*/
     background-color: #fefdceb9;
     flex-direction: column;
-    
-
 }
 
-#left_header{
-    height: 10%; 
+#left_header {
+    height: 10%;
     width: 100%;
 }
 
 #header_text {
-    background-color: #fefdcee3; 
-    height: 90%; 
+    background-color: #fefdcee3;
+    height: 90%;
     width: 100%;
     text-align: center;
     font-family: "Castellar";
 }
 
-h1{
+h1 {
     font-size: 100%;
     padding: 0px;
     margin: 0px;
     padding-top: 10px;
 }
 
-
-#left_main2{
+#left_main2 {
     height: 100%;
     width: 100%;
 }
 
-#left_main{
+#left_main {
     height: 100%;
     width: 100%;
     background-color: #fefdceb9;
     background-image: url("../images/cars.jpg");
-   /* opacity: 0.4;*/ 
+    /* opacity: 0.4;*/
 }
 
-#left_content{
+#left_content {
     margin-top: 10%;
     margin-left: 10%;
     height: 100%;
@@ -72,18 +69,15 @@ h1{
     width: 80%;
 }
 
-
-
-img{
-    min-width:10%;
-    min-height:10%;
-    max-width:100%;
-    max-height:100%;
+img {
+    min-width: 10%;
+    min-height: 10%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
 }
 
-
-#ride_share_title{
+#ride_share_title {
     margin-top: 10%;
     margin-left: 5%;
     height: 10px;
@@ -91,10 +85,9 @@ img{
     font-family: "Bradley Hand ITC";
     font-size: 25px;
     color: #5a6aaf;
-
 }
 
-#ride_share{
+#ride_share {
     margin: 5%;
     height: 80%;
     width: 90%;
@@ -102,37 +95,34 @@ img{
     flex-direction: row;
 }
 
-#ride_share_content{
-        background-color: #5a6aaf;
-        margin: 2%;
-        height: 30%;
-        width: 30%;
-        color: #fefdcee3;
-        font-size: 15px;
-
+#ride_share_content {
+    background-color: #5a6aaf;
+    margin: 2%;
+    height: 30%;
+    width: 30%;
+    color: #fefdcee3;
+    font-size: 15px;
 }
 
-#left_pictures{
+#left_pictures {
     margin: 2%;
-    width: 30%;  
+    width: 30%;
     height: 30%;
 }
 
-
-#right_screen2{
+#right_screen2 {
     font-size: 30px;
     color: #5a6aaf;
     display: flex;
     width: 25%;
     height: 100%;
     background-color: #fefdceb9;
-    
-   /* opacity: 0.7;*/
+    /* opacity: 0.7;*/
     /*background-color:#2fb17d;*/
     flex-direction: column;
-
 }
-#right_screen {    
+
+#right_screen {
     font-size: 30px;
     color: #5a6aaf;
     display: flex;
@@ -143,39 +133,50 @@ img{
 }
 
 #header_logo {
-    width: 80%;  
+    width: 80%;
     height: 80%;
     margin: 10%;
     margin-top: 1%;
 }
 
-#map{
+#map {
     border-radius: 25px;
-    width: 70%;  
+    width: 70%;
     height: 10%;
     padding: 5%;
     margin: 10%;
     margin-bottom: 0px;
     background-color: white;
     font-size: 15px;
-   
-
 }
 
-#map_arrow{
+#map_arrow {
     margin-left: auto;
     margin-right: auto;
-    width: 30%;  
+    width: 30%;
     height: 30%;
 }
 
-
-#picture{
-    width: 80%;  
+#picture {
+    width: 80%;
     height: 30%;
-    margin:10%;
+    margin: 10%;
 }
 
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-
-
+.box {
+    background-color: #5a6aaf;
+    margin: 2%;
+    height: 30%;
+    width: 30%;
+    color: #fefdcee3;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
