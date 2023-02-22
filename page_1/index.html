@@ -14,49 +14,37 @@
     <div class="box-form">
         <div class="left">
             <div class="overlay">
-
-                <div>
-                    <div class="left">
-                        <img src="../images/MOBY_ICON.png" alt="Moby Icon">
-                        <h1 style="color: #5a6aaf">DHBW RideShare</h1>
-                    </div>
-
-
-                </div>
-
-                <h3 style="color: #fefdce;">Hey there, I am Moby! Use this awesome platform to find your next Ride to the DHBW and study like no one else. Happy riding!
-                </h3>
-
+                <img src="../images/MOBY_ICON.png" alt="Moby Icon">
+                <h1 style="color: #5a6aaf">DHBW RideShare</h1>
+                <h3 style="color: #fefdce;">Hey there, I am Moby! Use this awesome platform to find your next Ride to the DHBW and study like no one else. Happy riding!</h3>
             </div>
         </div>
 
         <div class="right">
-
             <h5>Login</h5>
             <p>Don't have an account? <a href="../create_account/create_account.html">Create Your Account</a> it takes less than a minute</p>
-            <div class="inputs">
-                <input type="text" placeholder="username" id="username">
-                <br>
-                <input type="password" placeholder="password" id="password">
-            </div>
+            <input type="text" placeholder="username" id="username">
+
+            <br>
+
+            <input type="password" placeholder="password" id="password">
 
             <br><br>
 
-            <div class="remember-me--forget-password">
-                <label>
-          <input type="checkbox" name="item" checked />
-          <span class="text-checkbox">Remember me</span>
-        </label>
+            <div class="horizontal-alignment">
+                <input type="checkbox" name="checkbox" checked />
+                <label for="checkbox">Remember me</label><br>
                 <p><a href="../forgot_password/forgot_password.html">forgot password?</a></p>
             </div>
 
             <br>
 
-            <button onclick="window.alert('Login'); Login()">
-                <a href="../page_2/page_2.html" onclick="Routing();"> Login </a>
-            </button>
-            <button onclick="window.alert('Register'); saveLogin()"> Create Account </a></button>
-
+            <div class="horizontal-alignment">
+                <button onclick="window.alert('Login'); Login()">
+                    <a href="../page_2/page_2.html" onclick="Routing();"> Login </a>
+                </button>
+                <button onclick="window.alert('Register'); saveLogin()"> Create Account </a></button>
+            </div>
         </div>
         <script src="script.js"></script>
 </body>
