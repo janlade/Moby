@@ -1,28 +1,32 @@
-[
-  "user":{
-    "caraliu":{
+{
+  "user":[
+    {
+      "name":"caraliu",
       "password":12345
     },
-    "lenni":{
+    {
+      "name": "lenni",
       "password":135677
     }
-  },
-  "offer_routes": {
-    "1": {
+  ],
+  "offer_routes": [
+    {
+      "offer_routes_id": 1, 
       "start": "Lörrach",
       "end": "Freiburg",
       "date": "01.01.2023",
       "time": "14:00",
       "user": "lenni"
     }
-  },
-  "request_routes": {
-    "1": {
+  ],
+  "request_routes": [
+    {
+      "request_routes_id": 1,
       "start": "Lörrach",
       "end": "Müllheim",
       "date": "01.01.2023",
       "time": "13:00",
       "user": "caraliu"
     }
-  }
-]
+  ]
+}
