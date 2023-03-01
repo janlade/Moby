@@ -7,26 +7,74 @@
     {
       "name": "lenni",
       "password":135677
+    },
+    {
+      "name": "Jan",
+      "password":555555
     }
   ],
   "offer_routes": [
     {
       "offer_routes_id": 1, 
-      "start": "Lörrach",
-      "end": "Freiburg",
-      "date": "01.01.2023",
+      "start": "lörrach",
+      "end": "freiburg",
+      "date": "2023-01-01",
       "time": "14:00",
-      "user": "lenni"
+      "user": "lenni",
+      "contact": "lenni@email.com",
+      "seats": 4
+    },
+    {
+      "offer_routes_id": 2, 
+      "start": "müllheim",
+      "end": "lörrach",
+      "date": "2023-01-01",
+      "time": "16:00",
+      "user": "caraliu",
+      "contact":"caraliu@email.com",
+      "seats": 2
+    },
+    {
+      "offer_routes_id": 3, 
+      "start": "lörrach",
+      "end": "freiburg",
+      "date": "2023-01-01",
+      "time": "16:00",
+      "user": "caraliu",
+      "contact":"caraliu@email.com",
+      "seats": 3
+    },
+    {
+      "offer_routes_id": 4, 
+      "start": "lörrach",
+      "end": "freiburg",
+      "date": "2023-01-01",
+      "time": "16:00",
+      "user": "Jan",
+      "contact":"jan@email.com",
+      "seats": 3
     }
+
   ],
   "request_routes": [
     {
       "request_routes_id": 1,
-      "start": "Lörrach",
-      "end": "Müllheim",
-      "date": "01.01.2023",
+      "start": "lörrach",
+      "end": "freiburg",
+      "date": "2023-01-01",
       "time": "13:00",
-      "user": "caraliu"
+      "user": "caraliu",
+      "contact":"caraliu@email.com"
+    },
+    {
+      "request_routes_id": 2, 
+      "start": "lörrach",
+      "end": "freiburg",
+      "date": "2023-01-01",
+      "time": "16:00",
+      "user": "Jan",
+      "contact":"jan@email.com",
+      "seats": 3
     }
   ]
 }
