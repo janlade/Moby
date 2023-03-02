@@ -22,7 +22,8 @@
       "time": "14:00",
       "user": "lenni",
       "contact": "lenni@email.com",
-      "seats": 4
+      "seats": 4,
+      "note":"No pets"
     },
     {
       "offer_routes_id": 2, 
@@ -32,7 +33,8 @@
       "time": "16:00",
       "user": "caraliu",
       "contact":"caraliu@email.com",
-      "seats": 2
+      "seats": 2,
+      "note":"No smoker"
     },
     {
       "offer_routes_id": 3, 
@@ -42,7 +44,8 @@
       "time": "16:00",
       "user": "caraliu",
       "contact":"caraliu@email.com",
-      "seats": 3
+      "seats": 3,
+      "note":"smoker"
     },
     {
       "offer_routes_id": 4, 
@@ -52,7 +55,8 @@
       "time": "16:00",
       "user": "Jan",
       "contact":"jan@email.com",
-      "seats": 3
+      "seats": 3,
+      "note":"pets okay"
     }
 
   ],
@@ -64,7 +68,8 @@
       "date": "2023-01-01",
       "time": "13:00",
       "user": "caraliu",
-      "contact":"caraliu@email.com"
+      "contact":"caraliu@email.com",
+      "note":"with a small dog"
     },
     {
       "request_routes_id": 2, 
@@ -74,7 +79,8 @@
       "time": "16:00",
       "user": "Jan",
       "contact":"jan@email.com",
-      "seats": 3
+      "seats": 3,
+      "note":"smoking break would be preferred"
     }
   ]
 }
