@@ -1,0 +1,28 @@
+Note:
+1.Username case senstive 
+2.location search/post not case senstive
+3.blue in logo: #5a6aaf
+4.positionstack Geocoding API user&pw: dhbw email https://positionstack.com/dashboard
+5.map start point freiburg lat ln
+6.page_3 new post id is not dynamic
+7.detail page not working properly in chrome (firefox will do)
+
+
+ 
+
+Todo:
+3. no route found msg move to the center
+4. search button not relative
+5. left and right column same height still shaky (left too short always)
+6. check: #left-content {
+height: 100%;
+width: 80%;
+} for page 2 why?
+9. page_3 id tracking is bit cheating: check the local json file instead of the API(Git automation?)
+
+
+
+
+Problem to discuss:
+1.if we set up a small server to really be able to write data into JSON or just use localStorage?
+2.should the new post to be shown? (a landing page?)

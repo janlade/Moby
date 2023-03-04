@@ -7,118 +7,103 @@
     <title>Moby</title>
     <link href="page_3.css" rel="stylesheet" type="text/css" />
 </head>
-<script src="page_3.js"></script>
 
 <body>
-    <div id="screen">
-        <div id="left_screen">
-            <!-- <div id="header_icons"> 
-                <p> <a href="../page_1/index.html"> Logout </a> </p>
-            </div>
-    -        -->
-            <div id="left_header">
-                <div id="header_text">
-                    <h1 style="color: #5a6aaf"> DHBW RideShare </h1>
-                </div>
+    <div id="box-form">
+        <div id="left">
+            <div class="horizontal-alignment" id="left-header">
+                <h1 id="left-header-text"></h1>
             </div>
 
-            <br>
-
-            <div id="left_main">
-                <!-- 
-                <div id="left_pic"> 
-                    <img src="../images/cars.jpg" alt="Moby Icon">
+            <div id="left-content">
+                <div id="title">
+                    <p> Let's travel together! </p>
                 </div>
-                -->
-                <div id="left_content">
-                    <div id="ride_share_title">
-                        <p> Eine neue Anfrage anlegen: </p>
-                    </div>
-
-                    <div id="ride_share">
-                        <label for="Anfrage">Bitte auswählen:</label>
-                        <br>
-                        <select name="Anfrage" id="type">
-                        <option value="car">Mitfahrer gesucht</option>
-                        <option value="person">Mitfahrgelegenheit gesucht</option>
-                        </select>
-                    </div>
-
-                    <div id="ride_share">
-                        <label for="Anzahl">Anzahl Sitze:</label>
-                        <select name="number" id="seats">
-                        <option value="one">1 Sitzplatz</option>
-                        <option value="two">2 Sitzplätze</option>
-                        <option value="three">3 Sitzplätze</option>
-                        <option value="four">4 Sitzplätze</option>
-                        </select>
-                    </div>
-
-                    <div id="ride_share">
-                        <form>
-                            <label for="Start">Start:</label>
-                            <input type="text" id="start" name="start"><br><br>
-                            <label for="Ziel">Ziel:</label>
-                            <input type="text" id="ziel" name="ziel"><br><br>
-                        </form>
-                    </div>
-                    <div id="ride_share">
-                        <form>
-                            <label for="Von">Uhrzeit von:</label>
-                            <input type="text" id="time_start" name="von"><br><br>
-                            <label for="Bis">Uhrzeit bis:</label>
-                            <input type="text" id="time_end" name="bis"><br><br>
-                            <a href="../page_2/page_2.html"> <input type="submit" value="Abbrechen" /> </a>
-                            <input type="submit" value="Speichern">
-
-
-
-                        </form>
-
-                    </div>
-
-                    <head>
-                        <title>Submit Button Redirect</title>
-                    </head>
-
-                    <body>
-                        <form method="POST" action="../page_2/page_2.html">
-                            <input type="submit" />
-                        </form>
-                    </body>
-
-                    <button onclick="window.alert('click'); saveAnfrage()"><a > Speichern2 </a></button>
-
+<!-- TODO container wrapper -->
+                <div class="container">
+                    <img src="../images/type.png">
+                    <label for="type">*Type of post:</label>
+                    <select id="type">
+                        <option value="offer_routes_id">Offer a ride</option>
+                        <option value="request_routes_id">Need a ride</option>
+                    </select>
                 </div>
 
+                <div class="container">
+                    <img src="../images/calendar.png">
+                    <label for="date">*Date:</label>
+                    <input type="date" id="date">
+                </div>        
+            
+                <div class="container">
+                    <img src="../images/time.png">
+                    <label for="time">*Time:</label>
+                    <input type="time" id="time">
+                </div>
+
+                <div class="container">
+                    <img src="../images/start.png">
+                    <label for="start">*Where from:</label>
+                    <input type="text" id="start">
+                </div>
+
+                <div class="container">
+                    <img src="../images/end.png">
+                    <label for="end">*Where to:</label>
+                    <input type="text" id="end">
+                </div>
+
+                <div class="container">
+                    <img src="../images/seat-number.png">
+                    <label for="seats">Number of seats:</label>
+                    <select id="seats">
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                    </select>
+                </div>
+
+                <div class="container">
+                    <img src="../images/contact2.png">
+                    <label for="end">*Contact:</label>
+                    <input type="text" id="contact">
+                </div>
+
+                <div class="container">
+                    <img src="../images/note2.png">
+                    <label for="end">Note:</label>
+                </div>
+                <textarea rows="4" cols="50" id="note"></textarea>
+                
+                <!-- <div class="container" id="note-container">
+                    <input type="text" id="note">
+                </div> -->
+
+                <div class="container" id="button-container">
+                    <button class="button" id="exit-button">Exit</button>
+                    <button class="button" id="save-button">Save</button>
+                </div>
             </div>
-
         </div>
 
-        <div id="right_screen2">
-
-            <div id="header_logo">
-                <img src="../images/MOBY_ICON.png" alt="Moby Icon">
+        <div id="right">
+            <div id="header-logo">
+                <img src="../images/MOBY_ICON.png" id="icon">
             </div>
-            <div id="map">
-                <div id="map_arrow">
-                    <img src="../images/arrow2.jpg" alt="Moby Icon">
-                </div>
-
-                <a href="../page_3/page_3.html"> Route anzeigen  </a>
-
+            <!-- <div id="new-post">
+                you wanna put on a new post?
+                <button class="new-post-button" id="new-post-button-right"> New Post </button>
+            </div> -->
+            <div id="back">
+                <button class="button" id="back-button"> Back </button>
             </div>
-            <div id="picture">
-                <img src="../images/globe-trotter.jpg" alt="Moby Icon">
+            <div id="logout">
+                <button class="button" id="logout-button"> Logout  </button>
             </div>
-            <div>
-                <a href="../page_1/index.html"> Logout  </a>
-            </div>
-
-        </div>
-
-    </div>
-
+        </div>    
+    </div>  
+    <script type="module" src="page_3.js"></script>
 </body>
 
 </html>

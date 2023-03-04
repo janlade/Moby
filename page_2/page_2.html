@@ -9,91 +9,59 @@
 </head>
 
 <body>
-    <div id="screen">
-        <div id="left_screen">
-            <!-- <div id="header_icons"> 
-                <p> <a href="../page_1/index.html"> Logout </a> </p>
+    <div id="box-form">
+        <div id="left">
+            <div class="horizontal-alignment" id="left-header">
+                <!-- <div id="map-location-container">
+                    <img src="../images/road.jpg" id="road">
+                </div> -->
+                <h1 id="left-header-text"></h1>
             </div>
-    -        -->
-            <div id="left_header">
-                <div id="header_text">
-                    <h1 style="color: #5a6aaf"> DHBW RideShare </h1>
+            
+            <div class="horizontal-alignment" id="left-search">
+                <div id="map-location-container">
+                    <img src="../images/map-location.png" id="map-location">
                 </div>
-            </div>
-
-            <br>
-
-            <div id="left_main">
-                <!-- 
-                <div id="left_pic"> 
-                    <img src="../images/cars.jpg" alt="Moby Icon">
-                </div>
-                -->
-                <div id="left_content">
-                    <div id="ride_share_title">
-                        <p> Mitfahrer gesucht: </p>
-                    </div>
-
-                    <div id="ride_share">
-                        <div id="left_pictures">
-                            <img src="../images/dog.jpg" alt="Moby Icon">
-                        </div>
-                        <div id="ride_share_content">
-                            <p> Max fährt Köln-Bonn</p>
-                        </div>
-
-                        <div id="container">
-
-                        </div>
-
-                    </div>
-                    <div id="ride_share">
-
-                    </div>
-                    <div id="ride_share_title">
-                        <p> Mitfahrgelegenheit gesucht: </p>
-                    </div>
-
-                    <div id="ride_share">
-                        <div id="left_pictures">
-                            <img src="../images/fantasy-car.jpg" alt="Moby Icon">
-                        </div>
-                        <div id="ride_share_content">
-                            <p> Ben möchte nach Berlin</p>
-                        </div>
-
-                    </div>
-                </div>
-
+                <input type="text" placeholder="From" class="search-area" id="start-location">
+                <input type="text" placeholder="To" class="search-area" id="end-location">
+                <input type="date" placeholder="Date" class="search-area" id="date">
+                <button type="submit" id="search-button"> Search </button>
             </div>
 
+            <div id="loader-container">
+                <div class="loader" id="loader"></div>
+            </div>
+
+            <div id="left-content">
+                <div id="start-pic">
+                    <img src="../images/startpic.png" id="left-content-start-pic">
+                </div>
+                <div class="ride-share-content" id="ride-share-content-top">
+                    <p> Carpool offer: </p>
+                    <div class="display-board" id="ride_provider"></div>
+                </div>
+
+                <div class="ride-share-content" id="ride-share-content-bottom">
+                    <p> Carpool request: </p>
+                    <div class="display-board" id="ride_requester"></div>
+                </div>
+            </div>
         </div>
 
-        <div id="right_screen2">
-
-            <div id="header_logo">
+        <div id="right">
+            <div id="header-logo">
                 <img src="../images/MOBY_ICON.png" alt="Moby Icon">
             </div>
-            <div id="map">
-                <div id="map_arrow">
-                    <img src="../images/arrow2.jpg" alt="Moby Icon">
-                </div>
-
-                <a href="../page_3/page_3.html"> Eine neue Anfrage erstellen  </a>
-
+            <div id="new-post">
+                you wanna put on a new post?
+                <button class="new-post-button" id="new-post-button-right"> New Post </button>
             </div>
-            <div id="picture">
-                <img src="../images/globe-trotter.jpg" alt="Moby Icon">
+            <div id="logout">
+                <button class="button" id="logout-button"> Logout  </button>
             </div>
-            <div>
-                <a href="../page_1/index.html"> Logout  </a>
-            </div>
-
-        </div>
-
-    </div>
+        </div>    
+    </div>  
     <script src="page_2.js"></script>
-
 </body>
 
 </html>
