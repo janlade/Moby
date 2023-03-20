@@ -11,9 +11,12 @@ async function loginCheck(){
     const data = await res.json();
     let user = data.user;
     let checker = true;
+    console.log(username,password)
     for (let i = 0; i < user.length; i++) {
         if (username == user[i].name){
+            console.log("in username checking")
             if (password == user[i].password){
+                console.log("in username checking")
                 checker = false;
                 routing();
             }
