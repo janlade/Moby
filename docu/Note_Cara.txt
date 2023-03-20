@@ -1,28 +1,30 @@
 Note:
 1.Username case senstive 
 2.location search/post not case senstive
-3.blue in logo: #5a6aaf
 4.positionstack Geocoding API user&pw: dhbw email https://positionstack.com/dashboard
-5.map start point freiburg lat ln
-6.page_3 new post id is not dynamic
+5.openroute API-KEY: 5b3ce3597851110001cf6248f43db33892644b6d808f1af271890c4e
 7.detail page not working properly in chrome (firefox will do)
+8.leaflet installation erfordert
+9.map only show within Germany
 
-
+3.blue in logo: #5a6aaf
+6.page_3 new post id is not dynamic
  
 
 Todo:
 3. no route found msg move to the center
 4. search button not relative
-5. left and right column same height still shaky (left too short always)
 6. check: #left-content {
 height: 100%;
 width: 80%;
 } for page 2 why?
 9. page_3 id tracking is bit cheating: check the local json file instead of the API(Git automation?)
 
+16.route api change and route-info in page 4
+12.latest routes page 2
+13.ungültige location Eingabe
+14.from new post page to page 2 show the latest post and related posts
+16.page 4 title img 
+15.alert window verbessern
 
 
-
-Problem to discuss:
-1.if we set up a small server to really be able to write data into JSON or just use localStorage?
-2.should the new post to be shown? (a landing page?)

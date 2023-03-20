@@ -14,6 +14,8 @@ async function createAccount(){
             return;
         }
     };
+    localStorage.setItem("username",username);
+    localStorage.setItem("password",password);
     alert("successfully created a new account!");
     routing();
 }

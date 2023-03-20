@@ -1,14 +1,14 @@
 const username = localStorage.getItem("username");
 const header = document.querySelector('#left-header-text');
-const rideProvider = document.querySelector('#ride_provider');
-const rideRequester = document.querySelector('#ride_requester');
+const rideProvider = document.querySelector('#ride-provider');
+const rideRequester = document.querySelector('#ride-requester');
 const content = document.querySelector('#left-content');
 const contentTop = document.querySelector('#ride-share-content-top');
 const contentBottom = document.querySelector('#ride-share-content-bottom');
 const searchButton = document.querySelector('#search-button');
 const left = document.querySelector('#left');
 const right = document.querySelector('#right');
-const startPic = document.querySelector('#left-content-start-pic');
+const startPic = document.querySelector('#start-pic');
 const loader = document.querySelector('#loader-container');
 const logoutButton = document.querySelector('#logout-button');
 const newPostButton = document.querySelector('.new-post-button');
@@ -21,9 +21,9 @@ newPostButton.addEventListener('click',newPostRouting);
 
 contentTop.style.display = "none";
 contentBottom.style.display = "none";
-startPic.onload = function(){
-    right.style.height = left.offsetHeight + 5 + "px";
-};
+// startPic.onload = function(){
+//     right.style.height = left.offsetHeight + 5 + "px";
+// };
 
 async function searchRestulDisplay(){
     loader.style.display="inline-block";
@@ -73,6 +73,7 @@ async function searchRestulDisplay(){
         msg.innerHTML = "New Post";
         msg.addEventListener('click',newPostRouting);
         rideProvider.appendChild(msg);
+        console.log(rideProvider)
     }
 
     for (let i = 0; i < requestRoutes.length; i++) {
@@ -102,7 +103,7 @@ async function searchRestulDisplay(){
         rideRequester.appendChild(msg);
     }
 
-    right.style.height = left.offsetHeight + 5 + "px";
+    // right.style.height = left.offsetHeight + 5 + "px";
     loader.style.display="none";
 }
 

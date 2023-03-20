@@ -20,13 +20,18 @@ backButton.addEventListener('click',backRouting);
 exitButton.addEventListener('click',backRouting);
 saveButton.addEventListener('click',saveData);
 
-right.style.height = left.offsetHeight + 5 + "px";
 
 function saveData() {
     if(date.value == ""||time.value == ""||start.value == ""||end.value == ""||contact.value == "") {
         alert("Please complete the form before you submit!");
         return;
-    } 
+    }
+    
+    if(validateLocations(start,end)) {
+        alert("Please give valid locations!");
+        return;
+    }
+    
     let newPost
     if(type.value == "offer_routes_id"){
         newPost = {
@@ -60,6 +65,10 @@ function saveData() {
     
 }
 
+function validateLocations(start,end) {
+    return false
+}
+
 
 function logoutRouting() {
     location.replace("../page_1/index.html");
@@ -78,50 +87,3 @@ function parseIdStr(idStr) {
 }
 
 
-
-
-
-
-// following old script from leni
-
-// var id = 0
-
-// function saveAnfrage() {
-
-//     this.id += 1;
-
-//     var type = document.getElementById("type").value;
-//     var seats = document.getElementById("seats").value;
-//     var start = document.getElementById("start").value;
-//     var ziel = document.getElementById("ziel").value;
-//     var time_start = document.getElementById("time_start").value;
-//     var time_end = document.getElementById("time_end").value;
-
-//     var id = { 'id': this.id, 'Typ': type, 'Sitze': seats, 'Start': start, 'Ziel': ziel, 'Startzeit': time_start, 'Endzeit': time_end };
-//     window.alert(id)
-//     var username = window.localStorage.getItem("user");
-//     // Put the object into storage
-//     localStorage.setItem(username, JSON.stringify(id));
-//     console.log(id)
-
-
-
-//     // Retrieve the object from storage
-//     var retrievedObject = localStorage.getItem(id);
-
-//     console.log(JSON.parse(retrievedObject));
-
-// }
-
-
-
-
-
-
-// // Put the object into storage
-// localStorage.setItem('testObject', JSON.stringify(testObject));
-
-// // Retrieve the object from storage
-// var retrievedObject = localStorage.getItem('testObject');
-
-// console.log('retrievedObject: ', JSON.parse(retrievedObject));
