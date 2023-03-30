@@ -1,6 +1,5 @@
 const submit = document.querySelector('#submit');
 submit.addEventListener('click',createAccount);
-right.style.height = left.offsetHeight + 5 + "px";
 
 async function createAccount(){
     let username = document.querySelector('#username').value;
@@ -20,7 +19,6 @@ async function createAccount(){
     routing();
 }
 
-
 function localStorageUserInfo(username,password){
     localStorage.setItem("username",username);
     localStorage.setItem("password",password);
@@ -33,37 +31,3 @@ function routing() {
 function showErrorMsg(){
     document.getElementById("error-msg").style.opacity = 1;
 }
-
-
-
-
-
-// function saveLogin() {
-
-//     this.username = document.getElementById("username").value;
-//     if (window.localStorage.getItem(this.username)) {
-//         window.alert("username already taken! Please choose another username!");
-//         return;
-//     }
-//     window.alert(this.username);
-
-//     var password = document.getElementById("password").value;
-//     window.alert(password);
-
-//     window.localStorage.setItem(this.username, password);
-// }
-
-// function Login() {
-//     this.username = document.getElementById("username").value;
-//     var saved_password = window.localStorage.getItem(this.username);
-//     var password = document.getElementById("password").value;
-//     if (saved_password == password) {
-//         window.alert("Yuhu, you remembered your password!")
-//         this.linking = "../page_2/page_2.html"
-//     } else {
-//         window.alert("wrong password! Please try again")
-//     }
-//     // Merke, welcher user angemeldet ist!
-//     window.localStorage.setItem("user", this.username);
-// }
-

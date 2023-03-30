@@ -8,7 +8,8 @@ const contentBottom = document.querySelector('#ride-share-content-bottom');
 const searchButton = document.querySelector('#search-button');
 const left = document.querySelector('#left');
 const right = document.querySelector('#right');
-const startPic = document.querySelector('#start-pic');
+const startPicContainer = document.querySelector('#start-pic');
+const startPic = document.querySelector('#left-content-start-pic');
 const loader = document.querySelector('#loader-container');
 const logoutButton = document.querySelector('#logout-button');
 const newPostButton = document.querySelector('.new-post-button');
@@ -19,15 +20,29 @@ logoutButton.addEventListener('click',logoutRouting);
 searchButton.addEventListener('click',searchRestulDisplay);
 newPostButton.addEventListener('click',newPostRouting);
 
+if(localStorage.getItem("IfPage4")){
+    startPic.style.display="none";
+    let newPost = JSON.parse(localStorage.getItem("newPost"));
+
+    let date = newPost.date;
+    let time = newPost.time;
+    let start = newPost.start;
+    let end = newPost.end;
+    let user = newPost.user;
+
+    const newRoute = document.createElement('div');
+    newRoute.classList.add('box');
+    newRoute.innerHTML = user + " will drive from " + capitalizeFirstLetter(start) + " to " + capitalizeFirstLetter(end) + "<br>" + "<br> On: " + date + "  <B>" + time + "</B>";
+    newRoute.style.margin="200px";
+    startPicContainer.appendChild(newRoute);
+}
+
 contentTop.style.display = "none";
 contentBottom.style.display = "none";
-// startPic.onload = function(){
-//     right.style.height = left.offsetHeight + 5 + "px";
-// };
 
 async function searchRestulDisplay(){
     loader.style.display="inline-block";
-    startPic.style.display = "none";
+    startPicContainer.style.display = "none";
     contentTop.style.display = "flex";
     contentBottom.style.display = "flex";
     let startLocation = document.querySelector('#start-location').value.toLowerCase();
@@ -102,8 +117,6 @@ async function searchRestulDisplay(){
         msg.addEventListener('click',newPostRouting);
         rideRequester.appendChild(msg);
     }
-
-    // right.style.height = left.offsetHeight + 5 + "px";
     loader.style.display="none";
 }
 
@@ -123,59 +136,3 @@ function newPostRouting() {
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
-
-// const container = document.querySelector('#container');
-
-// const values = [1, 2, 3, 4, 5];
-// text = ['Max', 'Lörrach', 'Freiburg'];
-
-// for (let i = 0; i < values.length; i++) {
-//     const newBox = document.createElement('div');
-//     newBox.classList.add('box');
-//     newBox.innerHTML = text[0] + " fährt von " + text[1] + " nach " + text[2] + "   Value: " + values[i];
-//     container.appendChild(newBox);
-
-//     newBox.addEventListener('click', function() {
-//         this.innerHTML = text[0] + "fährt von " + text[1] + "nach " + text[2] + "Value: " + (parseInt(this.innerHTML.split(': ')[1]) + 1);
-//     });
-// }
-
-
-// // Vprschlag von chat gpt
-// const saveButton = document.querySelector('#save-button');
-// const nameInput = document.querySelector('#name');
-// const emailInput = document.querySelector('#email');
-// const boxContainer = document.querySelector('#box-container');
-
-// let data = [];
-
-// saveButton.addEventListener('click', function() {
-//     const name = nameInput.value;
-//     const email = emailInput.value;
-
-//     data.push({ name, email });
-
-//     localStorage.setItem('data', JSON.stringify(data));
-
-//     createBox(name, email);
-// });
-
-
-// // ToDo: data besser abspeichern und hier richtig aufrufen
-
-
-// localStorage.setItem('data', JSON.stringify(data));
-
-
-// const createBox = (name, email) => {
-//     const newBox = document.createElement('div');
-//     newBox.classList.add('box');
-//     newBox.innerHTML = `Name: ${name}<br>Email: ${email}`;
-//     boxContainer.appendChild(newBox);
-// };
-
-// const savedData = JSON.parse(localStorage.getItem('data')) || [];
-
-// savedData.forEach(({ name, email }) => {
-//     createBox(name, email);
-// });

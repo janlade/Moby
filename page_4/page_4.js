@@ -1,7 +1,4 @@
 const username = localStorage.getItem("username");
-// const idStr = localStorage.getItem("routeId");
-// const routeType = parseIdStr(idStr)[0];
-// const routeId = parseInt(parseIdStr(idStr)[1]);
 const header = document.querySelector('#left-header-text');
 const logoutButton = document.querySelector('#logout-button');
 const backButton = document.querySelector('#back-button');
@@ -22,8 +19,6 @@ header.innerHTML = "Thank you " + username + " for your post on DHBW RideShare!"
 logoutButton.addEventListener('click',logoutRouting);
 backButton.addEventListener('click',backRouting);
 newPostButton.addEventListener('click',newPostRouting);
-
-
 
 
 async function loadContent() {
@@ -62,7 +57,6 @@ async function loadContent() {
     contactCont.innerHTML = "Contact: "+ contact;
     userContact.appendChild(contactCont);
 
-
     //show seat  
     const seatCont = document.createElement('div');
     seatCont.id = "seat-content";
@@ -80,38 +74,31 @@ async function loadContent() {
     note.appendChild(noteCont);
 
     // show map
-    // let startUrl = 'http://api.positionstack.com/v1/forward?access_key=f85160d34d59ee7e59b0ac09f83ac9e6&query='+ start +',Germany'
-    // let endUrl = 'http://api.positionstack.com/v1/forward?access_key=f85160d34d59ee7e59b0ac09f83ac9e6&query='+ end +',Germany'
+    let startUrl = 'https://api.openrouteservice.org/geocode/search?api_key=5b3ce3597851110001cf6248f43db33892644b6d808f1af271890c4e&text='+start+'&boundary.circle.lon=7.6691&boundary.circle.lat=47.6168&boundary.circle.radius=300&boundary.country=DE&sources=openstreetmap&size=1';
+    let endUrl = 'https://api.openrouteservice.org/geocode/search?api_key=5b3ce3597851110001cf6248f43db33892644b6d808f1af271890c4e&text='+end+'&boundary.circle.lon=7.6691&boundary.circle.lat=47.6168&boundary.circle.radius=300&boundary.country=DE&sources=openstreetmap&size=1';
     
-    let startUrl = 'https://api.openrouteservice.org/geocode/autocomplete?api_key=5b3ce3597851110001cf6248f43db33892644b6d808f1af271890c4e&text='+ start
-    let endUrl =  'https://api.openrouteservice.org/geocode/autocomplete?api_key=5b3ce3597851110001cf6248f43db33892644b6d808f1af271890c4e&text='+ end 
     const startRes = await fetch(startUrl);
     const startData = await startRes.json();
     const endRes = await fetch(endUrl);
     const endData = await endRes.json();
 
-    // let startLat = startData.data[0].latitude;
-    // let startLn = startData.data[0].longitude;
-    // let endLat = endData.data[0].latitude;
-    // let endLn = endData.data[0].longitude;
-
-    let startLat = startData.features[1].geometry.coordinates[1];
-    let startLn = startData.features[1].geometry.coordinates[0];
-    let endLat = endData.features[1].geometry.coordinates[1];
-    let endLn = endData.features[1].geometry.coordinates[0];
+    let startLat = startData.features[0].geometry.coordinates[1];
+    let startLn = startData.features[0].geometry.coordinates[0];
+    let endLat = endData.features[0].geometry.coordinates[1];
+    let endLn = endData.features[0].geometry.coordinates[0];
 
     let routeUrl = 'https://api.openrouteservice.org/v2/directions/driving-car?api_key=5b3ce3597851110001cf6248f43db33892644b6d808f1af271890c4e&start='+startLn+','+startLat+'&end='+endLn+','+endLat;
     const routeRes = await fetch(routeUrl);
     const routeData = await routeRes.json();
     let route = routeData.features[0].geometry.coordinates;
-    let distance = routeData.features[0].properties.summary.distance;
+    let distance = (routeData.features[0].properties.summary.distance)/1000;
     let duration = routeData.features[0].properties.summary.duration;
     swapElementPosition(route);
     getMap(startLat, startLn, endLat, endLn, route);
 
     //show route-info
     let durationH = duration/3600
-    routeInfo.innerHTML = "This route is " + distance + " km. It will probably takes you " + durationH.toFixed(2) + " h to arrive " + capitalizeFirstLetter(end);
+    routeInfo.innerHTML = "This route is " + distance.toFixed(2) + " km. It will probably takes you " + durationH.toFixed(2) + " h to arrive " + capitalizeFirstLetter(end);
 }
 
 function getMap(latStart,lnStart,latEnd,lnEnd, route) {
@@ -121,7 +108,6 @@ function getMap(latStart,lnStart,latEnd,lnEnd, route) {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
     const path = L.polyline(route, {"color": "red"}).addTo(map);
-
     L.marker([latStart,lnStart]).addTo(map);
     L.marker([latEnd,lnEnd]).addTo(map);
 }
@@ -129,7 +115,7 @@ function getMap(latStart,lnStart,latEnd,lnEnd, route) {
 function swapElementPosition(route) {
     for (let coordinates of route) {
         coordinates = coordinates.reverse()
-      }
+    }
 }
 
 function newPostRouting() {
@@ -141,6 +127,7 @@ function logoutRouting() {
 }
 
 function backRouting() {
+    localStorage.setItem("IfPage4",true)
     location.replace("../page_2/page_2.html");
 }
 

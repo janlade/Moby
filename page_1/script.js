@@ -1,5 +1,3 @@
-// const username = document.getElementById('username');
-// const password = document.querySelector('#password');
 const login = document.querySelector('#login');
 login.addEventListener('click',loginCheck);
 
@@ -11,18 +9,15 @@ async function loginCheck(){
     const data = await res.json();
     let user = data.user;
     let checker = true;
-    console.log(username,password)
+
     for (let i = 0; i < user.length; i++) {
         if (username == user[i].name){
-            console.log("in username checking")
             if (password == user[i].password){
-                console.log("in username checking")
                 checker = false;
                 routing();
             }
         }
     };
-
     if (checker===true){
         showErrorMsg();
     };
@@ -41,37 +36,3 @@ function routing() {
 function showErrorMsg(){
     document.getElementById("login-error-msg").style.opacity = 1;
 }
-
-
-
-
-
-// function saveLogin() {
-
-//     this.username = document.getElementById("username").value;
-//     if (window.localStorage.getItem(this.username)) {
-//         window.alert("username already taken! Please choose another username!");
-//         return;
-//     }
-//     window.alert(this.username);
-
-//     var password = document.getElementById("password").value;
-//     window.alert(password);
-
-//     window.localStorage.setItem(this.username, password);
-// }
-
-// function Login() {
-//     this.username = document.getElementById("username").value;
-//     var saved_password = window.localStorage.getItem(this.username);
-//     var password = document.getElementById("password").value;
-//     if (saved_password == password) {
-//         window.alert("Yuhu, you remembered your password!")
-//         this.linking = "../page_2/page_2.html"
-//     } else {
-//         window.alert("wrong password! Please try again")
-//     }
-//     // Merke, welcher user angemeldet ist!
-//     window.localStorage.setItem("user", this.username);
-// }
-

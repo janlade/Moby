@@ -11,9 +11,6 @@ logoutButton.addEventListener('click',logoutRouting);
 backButton.addEventListener('click',backRouting);
 
 console.log(routeType,routeId);
-// right.style.height = left.offsetHeight + 5 + "px";
-
-
 
 
 function logoutRouting() {

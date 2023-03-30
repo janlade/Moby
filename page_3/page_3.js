@@ -21,13 +21,19 @@ exitButton.addEventListener('click',backRouting);
 saveButton.addEventListener('click',saveData);
 
 
-function saveData() {
+async function saveData() {
     if(date.value == ""||time.value == ""||start.value == ""||end.value == ""||contact.value == "") {
         alert("Please complete the form before you submit!");
         return;
     }
     
-    if(validateLocations(start,end)) {
+    let startUrl = 'https://api.openrouteservice.org/geocode/search?api_key=5b3ce3597851110001cf6248f43db33892644b6d808f1af271890c4e&text='+start;
+    let endUrl = 'https://api.openrouteservice.org/geocode/search?api_key=5b3ce3597851110001cf6248f43db33892644b6d808f1af271890c4e&text='+end;
+    
+    const startRes = await fetch(startUrl);
+    const endRes = await fetch(endUrl);
+
+    if(startRes.status != 200 || endRes.status != 200) {
         alert("Please give valid locations!");
         return;
     }
@@ -35,7 +41,7 @@ function saveData() {
     let newPost
     if(type.value == "offer_routes_id"){
         newPost = {
-            offer_routes_id: 5, 
+            offer_routes_id: 1, 
             start: start.value.toLowerCase(),
             end: end.value.toLowerCase(),
             date: date.value,
@@ -47,7 +53,7 @@ function saveData() {
         }
     } else {
         newPost = {
-            request_routes_id: 3, 
+            request_routes_id: 1, 
             start: start.value.toLowerCase(),
             end: end.value.toLowerCase(),
             date: date.value,
@@ -64,11 +70,6 @@ function saveData() {
     landingRouting();
     
 }
-
-function validateLocations(start,end) {
-    return false
-}
-
 
 function logoutRouting() {
     location.replace("../page_1/index.html");
