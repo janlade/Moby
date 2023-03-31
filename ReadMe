@@ -10,9 +10,9 @@
 
 5.Leaflet installation needed
 
-6.In new post page (page_3) we do have a check for location but because of the strucutre of Openroute API even wrong location name the response still gives 200 back. So the checking up is a mock.
+6.In the new post page (page_3) we do have a check for location but because of the strucutre of Openroute API even wrong location name the response still gives 200 back. So the checking up is a mock.
 
-7.If Moby not working properly in Chrome, please try Firefox
+7.If Moby is not working properly in Chrome, please try Firefox
 
 8.The website is fully in English
 
