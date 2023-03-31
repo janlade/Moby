@@ -1,28 +1,31 @@
 # Moby
+Link to GitHub Repo: https://github.com/janlade/Moby
 
-1.Username are case sensitive 
+1. Please find a PDF and Word file listing the implemented functionalities (split into MUST-HAVEs and NICE-TO-HAVEs) in the documentation folder.
 
-2.Location search/post are not case sensitive
+2.Username are case sensitive 
 
-3.Openroute API-KEY: 5b3ce3597851110001cf6248f43db33892644b6d808f1af271890c4e
+3.Location search/post are not case sensitive
 
-4.Map only shows results within 300km radius of Lörrach and in Germany (partially solves the problem with multiple locations sharing the same name, the better solution would be getting a more accurate information from the back server)
+4.Openroute API-KEY: 5b3ce3597851110001cf6248f43db33892644b6d808f1af271890c4e
 
-5.Leaflet installation needed
+5.Map only shows results within 300km radius of Lörrach and in Germany (partially solves the problem with multiple locations sharing the same name, the better solution would be getting a more accurate information from the back server)
 
-6.In the new post page (page_3) we do have a check for location but because of the strucutre of Openroute API even wrong location name the response still gives 200 back. So the checking up is a mock.
+6.Leaflet installation needed
 
-7.If Moby is not working properly in Chrome, please try Firefox
+7.In the new post page (page_3) we do have a check for location but because of the strucutre of Openroute API even wrong location name the response still gives 200 back. So the checking up is a mock.
 
-8.The website is fully in English
+8.If Moby is not working properly in Chrome, please try Firefox
 
-9.The model files are the basic structure of all Moby websites
+9.The website is fully in English
 
-10.Routes in our pseudo databank: 
+10.The model files are the basic structure of all Moby websites
+
+11.Routes in our pseudo databank: 
     Lörrach -> Freiburg 01.01.2023
     Müllheim -> Lörrach 01.01.2023
     
-10.User in our pseudo database: 
+12.User in our pseudo database: 
     name:caraliu
     pw:12345
     name:lenni
